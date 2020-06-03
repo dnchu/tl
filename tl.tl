@@ -3313,6 +3313,7 @@ local standard_library: {string:Type} = {
    ["any"] = a_type { typename = "typetype", def = ANY },
    ["arg"] = ARRAY_OF_STRING,
    ["require"] = a_type { typename = "function", args = { STRING }, rets = {} },
+   ["dofile"] = a_type { typename = "function", args = { STRING }, rets = { VARARG_ANY } },
    ["setmetatable"] = a_type { typeargs = { ARG_ALPHA }, typename = "function", args = { ALPHA, METATABLE }, rets = { ALPHA } },
    ["getmetatable"] = a_type { typename = "function", args = { ANY }, rets = { METATABLE } },
    ["rawget"] = a_type { typename = "function", args = { TABLE, ANY }, rets = { ANY } },
